@@ -24,7 +24,7 @@ api_key = st.secrets["API_KEY"]
 genai.configure(api_key=api_key)
 
 class load_data:
-  def __init__(self, output_path = 'C:\\Users\\PC\\Documents\\saif\\yt\\podcast'):
+  def __init__(self, output_path = '\podcast'):
     self.output_path = output_path
     self.w_model = whisper.load_model("tiny")
 
@@ -44,7 +44,7 @@ class load_data:
     except Exception as e:
         print(f"Error: {e}")
 
-  def transcribe_audio_files(self, folder_path = 'C:\\Users\\PC\\Documents\\saif\\yt\\podcast'):
+  def transcribe_audio_files(self, folder_path = '\podcast'):
     """
     Transcribe audio files in a specified folder and return a pandas DataFrame.
 
