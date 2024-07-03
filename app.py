@@ -24,7 +24,7 @@ if st.button("Download and Transcribe"):
                 st.session_state["transcription_text"] = transcription_text
 
                 st.success("Transcription completed!")
-                st.write(transcription_text)
+                #st.write(transcription_text)
 
             except Exception as e:
                 st.error(f"Error: {e}")
