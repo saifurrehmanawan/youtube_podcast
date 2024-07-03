@@ -20,7 +20,7 @@ import google.generativeai as genai
 # Used to securely store your API key
 import os
 # Load the API key from Streamlit secrets
-api_key = st.secrets["API_KEY "]
+api_key = st.secrets["API_KEY"]
 genai.configure(api_key=api_key)
 
 class load_data:
