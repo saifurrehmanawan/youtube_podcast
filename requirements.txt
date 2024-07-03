@@ -1,0 +1,9 @@
+whisper
+pytube
+faiss-cpu
+langchain
+langchain-community
+transformers
+google-generativeai
+pandas
+streamlit
