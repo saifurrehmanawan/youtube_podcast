@@ -27,7 +27,7 @@ if st.button("Download and Transcribe"):
                 #st.write(transcription_text)
 
             except Exception as e:
-                st.error("The YouTube video couldn't be downloaded from the link, possibly because it's age-restricted or there's another issue. Please try using a different video link.")
+                st.error(f"Error: {e}")
     else:
         st.warning("Please enter a valid YouTube link.")
 
