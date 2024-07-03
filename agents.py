@@ -94,7 +94,7 @@ class AIAgent:
 
   def create_prompt(self, query, context):
     prompt = f"""
-    You are an AI agent focused on answering questions about podcasts. Your task is to provide answers using the given context from the podcast transcript. Do not add any extra information beyond the answer itself.
+    You are an AI agent focused on answering questions about podcasts. Your task is to provide answers with the concise explanation using the given context from the podcast transcript.
 
     Given the following information:
 
