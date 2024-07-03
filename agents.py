@@ -1,4 +1,5 @@
 import whisper
+import streamlit as st
 from pytube import YouTube
 
 import faiss
@@ -18,8 +19,9 @@ import pandas as pd
 import google.generativeai as genai
 # Used to securely store your API key
 import os
-os.environ['API_KEY'] = API_K
-genai.configure(api_key=os.environ["API_KEY"])
+# Load the API key from Streamlit secrets
+api_key = st.secrets["API_KEY "]
+genai.configure(api_key=api_key)
 
 class load_data:
   def __init__(self, output_path = 'C:\\Users\\PC\\Documents\\saif\\yt\\podcast'):
