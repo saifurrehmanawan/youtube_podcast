@@ -66,6 +66,7 @@ class load_data:
             # Transcribe the audio file using the provided model
             print("WORKING ON ____", item)
             result = self.w_model.transcribe(audio_path)
+            os.remove(audio_path)
 
         return result["text"]
 
