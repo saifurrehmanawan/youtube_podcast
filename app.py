@@ -6,8 +6,8 @@ import os
 data_loader = load_data()
 
 # Streamlit app
-st.title("Podcast QA Agent")
-st.write("Provide a YouTube link of a podcast to get started.")
+st.title("Youtube QA Agent")
+st.write("Provide a YouTube link of a podcast, interviews or discussions to get started.")
 
 # Get YouTube link from the user
 youtube_link = st.text_input("YouTube Link:")
