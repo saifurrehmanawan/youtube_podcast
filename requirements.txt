@@ -7,3 +7,4 @@ transformers
 google-generativeai
 pandas
 streamlit
+ffmpeg
