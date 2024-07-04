@@ -32,6 +32,9 @@ if st.button("Download and Transcribe"):
         st.warning("Please enter a valid YouTube link.")
 
 if "transcription_text" in st.session_state:
+    st.write("Here are examples of questions you can ask.")
+    response = ai_agent.generate_ex()
+    st.write(response)
     st.write("You can now ask questions about the podcast.")
     question = st.text_input("Question:")
     if st.button("Ask"):
