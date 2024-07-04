@@ -72,6 +72,7 @@ class load_data:
 
 class AIAgent:
   def __init__(self, text, max_length=256, num_retrieved_docs = 3):
+    self.text = text
     self.max_length = max_length
     self.num_docs = num_retrieved_docs
     self.model = genai.GenerativeModel('gemini-pro')
@@ -104,8 +105,8 @@ class AIAgent:
     """
     return prompt
 
-  def generate_ex(self, text):
-    prompt = f"Can you generate the questions from the text {text}"
+  def generate_ex(self):
+    prompt = f"Can you generate the questions from the text {self.text}"
 
     answer = self.model.generate_content(prompt)
 
