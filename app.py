@@ -32,6 +32,7 @@ if st.button("Download and Transcribe"):
         st.warning("Please enter a valid YouTube link.")
 
 if "transcription_text" in st.session_state:
+    ai_agent = AIAgent(text=st.session_state["transcription_text"])
     st.write("Here are examples of questions you can ask.")
     response = ai_agent.generate_ex()
     st.write(response)
@@ -40,7 +41,7 @@ if "transcription_text" in st.session_state:
     if st.button("Ask"):
         if question:
             with st.spinner('Generating answer...'):
-                ai_agent = AIAgent(text=st.session_state["transcription_text"])
+                #ai_agent = AIAgent(text=st.session_state["transcription_text"])
                 response = ai_agent.query(question)
                 st.write(response)
         else:
