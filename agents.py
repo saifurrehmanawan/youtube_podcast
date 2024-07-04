@@ -104,6 +104,14 @@ class AIAgent:
     """
     return prompt
 
+  def generate_ex(self, text):
+    prompt = f"Can you generate the questions from the text {text}"
+
+    answer = self.model.generate_content(prompt)
+
+    print(prompt)
+    return answer.text
+
   def generate(self, query, retrieved_info):
     prompt = self.create_prompt(query, retrieved_info)
 
